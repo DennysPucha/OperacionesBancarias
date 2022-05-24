@@ -143,7 +143,7 @@ footer h3{
         width: 343px;
     }
     #Introduccion .text{
-        width: 60%;
+        width: 80%;
         text-align: justify;
         padding-left: 50px;
         padding-right: 0px;
@@ -202,7 +202,7 @@ footer h3{
         padding-right: 0px;
      }
      .container #logoimg{
-        height: 90px;
-        width: 110px;
+        height: 70px;
+        width: 120px;
     }
 }
