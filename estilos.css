@@ -92,6 +92,9 @@ header a:hover{
     text-align: justify;
     padding: 100px 12px;
 }
+#DiagramaImg{
+    padding: 15px 10px;
+}
 
 #DiagramaUML .container{
     text-align: justify;
@@ -110,7 +113,7 @@ footer h3{
     margin: 0;
 }
 
-@media (min-width:800px){
+@media (min-width:600px){
     header{
         position: fixed;
         width: 100%;
@@ -142,10 +145,57 @@ footer h3{
         padding-left: 50px;
         padding-right: 0px;
     }
+    #DiagramaImg1 .serieImagen1{
+        background-image: url("img/diagrama/P1.png");
+        background-size: cover;
+        background-position: center center;
+        height: 400px;
+        width: 400px;
+    }
+    #DiagramaImg1 {
+        padding: 25px 25px;
+        display: flex;
+    }
+    #DiagramaImg1 .text1{
+        width: 60%;
+        text-align: justify;
+        padding-left: 50px;
+        padding-right: 0px;
+     }
 
-    #DiagramaUML .img-container{
-        background-image: url("img/diagramaUml.png");
-        height: 100vh;
-        background-repeat: no-repeat;
-    }   
+     #DiagramaImg2 .serieImagen2{
+        background-image: url("img/diagrama/P2.png");
+        background-size: cover;
+        background-position: center center;
+        height: 400px;
+        width: 400px;
+    }
+    #DiagramaImg2 {
+        padding: 25px 25px;
+        display: flex;
+    }
+    #DiagramaImg2 .text2{
+        width: 60%;
+        text-align: justify;
+        padding-left: 50px;
+        padding-right: 0px;
+     }
+
+    #DiagramaImg3 .serieImagen3{
+        background-image: url("img/diagrama/P3.png");
+        background-size: cover;
+        background-position: center center;
+        height: 400px;
+        width: 400px;
+    }
+    #DiagramaImg3 {
+        padding: 25px 25px;
+        display: flex;
+    }
+    #DiagramaImg3 .text3{
+        width: 60%;
+        text-align: justify;
+        padding-left: 50px;
+        padding-right: 0px;
+     }
 }
