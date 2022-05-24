@@ -110,3 +110,42 @@ footer h3{
     margin: 0;
 }
 
+@media (min-width:800px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 10px;
+    }
+    #Introduccion .container{
+        display: flex;
+    }
+
+    #Introduccion .img-container{
+        background-image: url("img/OperacionesBancarias.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 400px;
+        width: 300px;
+    }
+    #Introduccion .text{
+        width: 60%;
+        text-align: justify;
+        padding-left: 50px;
+        padding-right: 0px;
+    }
+
+    #DiagramaUML .img-container{
+        background-image: url("img/diagramaUml.png");
+        height: 100vh;
+        background-repeat: no-repeat;
+    }   
+}
