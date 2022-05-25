@@ -148,7 +148,15 @@ header a:hover{
     )
     ,url("img/azul.png")
 }
+#Links .container{
+    text-align: center;
+    padding: 25px 10px;
+}
 
+#Links li{
+    margin: 16px 0px;
+    font-weight: bold
+}
 footer{
     background-color: #062042;
     color: white;
