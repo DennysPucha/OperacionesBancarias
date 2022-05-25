@@ -205,4 +205,18 @@ footer h3{
         height: 70px;
         width: 120px;
     }
+    #dFinal .imgdFinal{
+        background-image: url("img/dFinal-img.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 400px;
+        width: 400px;
+    }
+    #dFinal{
+        display: flex;
+    }
+    #dFinal .text{
+        padding-right: 50px;
+        padding-bottom: 70px;
+    }
 }
