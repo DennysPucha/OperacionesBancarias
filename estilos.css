@@ -104,6 +104,50 @@ header a:hover{
     text-align: justify;
     padding: 100px 10px;
 }
+#loscreadores{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+#loscreadores .container{
+    padding: 150px 12px;
+}
+
+#loscreadores h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#loscreadores p{
+    display: none;
+}
+
+#loscreadores .carta{
+    background-position: center;
+    background-size: cover;
+    padding: 25px 0px;
+    margin: 50px;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/azul.png")
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/azul.png")
+}
 
 footer{
     background-color: #062042;
