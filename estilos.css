@@ -100,6 +100,10 @@ header a:hover{
     text-align: justify;
     padding: 100px 12px;
 }
+#ConclusionesdelTrabajo .container{
+    text-align: justify;
+    padding: 100px 10px;
+}
 
 footer{
     background-color: #062042;
