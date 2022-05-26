@@ -256,6 +256,7 @@ footer h3{
         text-align: justify;
         padding-left: 50px;
         padding-right: 0px;
+        padding-bottom: 70px;
      }
      .container #logoimg{
         height: 70px;
@@ -340,18 +341,9 @@ footer h3{
     #Links ul{
         margin-left: 100px;
     }
-
-    #dFinal .imgdFinal{
-        background-image: url("img/dFinal-img.jpg");
-        background-size: cover;
-        background-position: center center;
-        height: 400px;
-        width: 400px;
-    }
-    #dFinal{
-        display: flex;
-    }
-    #dFinal .text{
+    #Funcionalidades .lista {
+        font-size:1.7em;
+        padding-top: 50px;
         padding-right: 50px;
         padding-bottom: 70px;
     }
