@@ -8,6 +8,6 @@ package model;
  *
  * @author Dennys
  */
-public class Cuenta {
+public abstract class Cuenta {
     
 }

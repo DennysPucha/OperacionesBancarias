@@ -8,6 +8,6 @@ package model;
  *
  * @author Dennys
  */
-public class Benefactor {
+public class Benefactor extends Cliente{
     
 }

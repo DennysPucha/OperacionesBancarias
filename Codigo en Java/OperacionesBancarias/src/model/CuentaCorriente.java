@@ -8,6 +8,6 @@ package model;
  *
  * @author Dennys
  */
-public class CuentaCorriente {
+public class CuentaCorriente extends Cuenta{
     
 }

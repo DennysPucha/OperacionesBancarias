@@ -8,6 +8,6 @@ package model;
  *
  * @author Dennys
  */
-public class Cliente {
+public abstract class Cliente {
     
 }
