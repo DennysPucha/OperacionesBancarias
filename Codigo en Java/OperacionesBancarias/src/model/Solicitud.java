@@ -4,6 +4,9 @@
  */
 package model;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  *
  * @author Dennys
@@ -12,8 +15,15 @@ public class Solicitud {
     private Cliente cliente;
     private Cuenta cuenta;
     private Registro registro;
-
+    private Recibo recibo;
+    private Historial historial;
+    private List<Cuenta> cuentaList;
+    private List<Prestamo> prestamoList;
+    private List<OperacionBancaria> operacionBancariaList;
+    
     public Solicitud() {
+        cuentaList=new LinkedList<>();
+        prestamoList= new LinkedList<>();
     }
     
     public Solicitud(Cliente cliente, Cuenta cuenta, Registro registro) {
@@ -21,6 +31,21 @@ public class Solicitud {
         this.cliente = cliente;
         this.cuenta = cuenta;
         this.registro = registro;
+    }
+
+    public Solicitud(Cliente cliente, Cuenta cuenta, Registro registro, Recibo recibo) {
+        this.cliente = cliente;
+        this.cuenta = cuenta;
+        this.registro = registro;
+        this.recibo = recibo;
+    }
+
+    public Recibo getRecibo() {
+        return recibo;
+    }
+
+    public void setRecibo(Recibo recibo) {
+        this.recibo = recibo;
     }
 
     public Cliente getCliente() {

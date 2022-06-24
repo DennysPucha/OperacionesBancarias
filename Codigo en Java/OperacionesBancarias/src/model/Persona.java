@@ -12,16 +12,23 @@ public abstract class Persona {
     private String cedula;
     private String nombre;
     private String sexo;
-
+    private Banco banco;
+    
     public Persona() {
     }
-
+    public Persona(String nombre, Banco banco) {
+        this();
+        this.nombre = nombre;
+        this.banco = banco;
+    }
+        
     public Persona(String cedula, String nombre, String sexo) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.sexo = sexo;
     }
 
+    
     public String getCedula() {
         return cedula;
     }

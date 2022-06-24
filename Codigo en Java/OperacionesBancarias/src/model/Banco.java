@@ -4,16 +4,21 @@
  */
 package model;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  *
  * @author Dennys
  */
 public class Banco {
+    
     private String direccion;
     private String nombre;
-
+    private List<Persona> personaList;
+    
     public Banco() {
-        
+        personaList=new LinkedList<>();
     }
 
     public Banco(String direccion, String nombre) {
@@ -42,7 +47,5 @@ public class Banco {
     public String toString() {
         return "Banco{" + "direccion=" + direccion + ", nombre=" + nombre + '}';
     }
-    
-    
     
 }

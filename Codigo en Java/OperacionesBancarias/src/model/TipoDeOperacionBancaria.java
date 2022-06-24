@@ -9,5 +9,17 @@ package model;
  * @author Dennys
  */
 public enum TipoDeOperacionBancaria {
+    Retiro,Deposito,Transferencia;
     
+    public static TipoDeOperacionBancaria getRetiro() {
+        return Retiro;
+    }
+
+    public static TipoDeOperacionBancaria getDeposito() {
+        return Deposito;
+    }
+
+    public static TipoDeOperacionBancaria getTransferencia() {
+        return Transferencia;
+    }
 }

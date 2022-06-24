@@ -4,6 +4,9 @@
  */
 package model;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  *
  * @author Dennys
@@ -12,8 +15,12 @@ public abstract class Cliente extends Persona{
     private String correo;
     private String numeroCuenta;
     private String numeroTelefono;
-
+    private List<Recibo> reciboList;
+    private List<Registro> registroList;
+    
     public Cliente() {
+        reciboList=new LinkedList<>();
+        registroList=new LinkedList<>();
     }
 
     
@@ -23,6 +30,12 @@ public abstract class Cliente extends Persona{
         this.numeroCuenta = numeroCuenta;
         this.numeroTelefono = numeroTelefono;
     }
+
+    public Cliente(String numeroCuenta, String nombre, Banco banco) {
+        super(nombre, banco);
+        this.numeroCuenta = numeroCuenta;
+    }
+    
     
     public String getCorreo() {
         return correo;

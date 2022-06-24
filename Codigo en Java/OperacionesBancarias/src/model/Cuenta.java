@@ -14,6 +14,8 @@ public abstract class Cuenta {
     private Boolean Intereses;
     private String nroCuenta;
     private OrientacionDeCuenta orientacionCuenta;
+    private Registro registro;
+    private Solicitud solicitud;
 
     public Cuenta() {
     }

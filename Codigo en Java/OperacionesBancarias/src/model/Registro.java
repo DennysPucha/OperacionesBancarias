@@ -4,6 +4,9 @@
  */
 package model;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  *
  * @author Dennys
@@ -12,10 +15,13 @@ public class Registro {
     //private Cliente cliente;
     private String contrasenia;
     private String nroCuenta;
+    private Cliente cliente;
+    private Solicitud solicitud;
+    private List<Cuenta> cuentaList;
 
     public Registro() {
+        cuentaList=new LinkedList<>();
     }
-
     
     public Registro(String contrasenia, String nroCuenta) {
         this();
@@ -23,6 +29,19 @@ public class Registro {
         this.nroCuenta = nroCuenta;
     }
 
+    public Registro(Cliente cliente) {
+        this();
+        this.cliente = cliente;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+    
     public String getContrasenia() {
         return contrasenia;
     }

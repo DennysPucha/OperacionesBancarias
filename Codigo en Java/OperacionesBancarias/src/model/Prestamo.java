@@ -12,6 +12,8 @@ public class Prestamo {
     private String monto;
     private Integer plazo;
     private String tipoDePrestamo;
+    private Solicitud solicitud;
+    private Divisa divisa;
 
     public Prestamo() {
     }

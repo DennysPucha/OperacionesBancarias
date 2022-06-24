@@ -4,29 +4,32 @@
  */
 package model;
 
+import java.util.List;
+
 /**
  *
  * @author Dennys
  */
 
 public class Historial {
-   private Solicitud solicitud;
+   private List<Solicitud> solicitudList;
 
-    public Historial(Solicitud solicitud) {
-        this.solicitud = solicitud;
+    public Historial(List<Solicitud> solicitudList) {
+        this.solicitudList = solicitudList;
+    }
+   
+
+    public List<Solicitud> getSolicitudList() {
+        return solicitudList;
     }
 
-    public Solicitud getSolicitud() {
-        return solicitud;
-    }
-
-    public void setSolicitud(Solicitud solicitud) {
-        this.solicitud = solicitud;
+    public void setSolicitudList(List<Solicitud> solicitudList) {
+        this.solicitudList = solicitudList;
     }
 
     @Override
     public String toString() {
-        return "Historial{" + "solicitud=" + solicitud + '}';
+        return "Historial{" + "solicitudList=" + solicitudList + '}';
     }
    
 }

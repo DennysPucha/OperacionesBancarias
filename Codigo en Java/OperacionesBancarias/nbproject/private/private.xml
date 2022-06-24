@@ -7,16 +7,20 @@
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/Benefactor.java</file>
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/OperacionBancaria.java</file>
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/Historial.java</file>
-            <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/CuentaCorriente.java</file>
+            <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/TipoDeContrato.java</file>
+            <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/TipoDeDivisa.java</file>
+            <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/gui/Banco.java</file>
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/Divisa.java</file>
+            <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/Persona.java</file>
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/Recibo.java</file>
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/main.java</file>
+            <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/OrientacionDeCuenta.java</file>
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/Banco.java</file>
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/Cuenta.java</file>
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/Prestamo.java</file>
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/Beneficiario.java</file>
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/Registro.java</file>
-            <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/CuentaDeAhorros.java</file>
+            <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/TipoDeOperacionBancaria.java</file>
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/Cliente.java</file>
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/Solicitud.java</file>
         </group>

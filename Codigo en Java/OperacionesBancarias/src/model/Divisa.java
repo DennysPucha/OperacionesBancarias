@@ -10,6 +10,8 @@ package model;
  */
 public class Divisa {
     private TipoDeDivisa tipoDeDivisa;
+    private OperacionBancaria operacionBancaria;
+    private Prestamo prestamo;
     
     public Divisa() {
     }

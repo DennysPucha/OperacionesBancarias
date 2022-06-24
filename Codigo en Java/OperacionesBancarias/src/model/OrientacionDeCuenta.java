@@ -9,5 +9,13 @@ package model;
  * @author Dennys
  */
 public enum OrientacionDeCuenta {
+    CuentaCorriente,CuentaDeAhorros;
     
+    public static OrientacionDeCuenta getCuentaCorriente() {
+        return CuentaCorriente;
+    }
+
+    public static OrientacionDeCuenta getCuentaDeAhorros() {
+        return CuentaDeAhorros;
+    }
 }
