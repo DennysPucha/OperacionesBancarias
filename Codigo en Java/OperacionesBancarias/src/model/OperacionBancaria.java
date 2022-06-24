@@ -21,6 +21,12 @@ public class OperacionBancaria {
         this.tipoDeOperacionBancaria = tipoDeOperacionBancaria;
     }
 
+    public OperacionBancaria(TipoDeOperacionBancaria tipoDeOperacionBancaria, Solicitud solicitud, Divisa divisa) {
+        this.tipoDeOperacionBancaria = tipoDeOperacionBancaria;
+        this.solicitud = solicitud;
+        this.divisa = divisa;
+    }
+    
     public TipoDeOperacionBancaria getTipoDeOperacionBancaria() {
         return tipoDeOperacionBancaria;
     }
@@ -29,9 +35,26 @@ public class OperacionBancaria {
         this.tipoDeOperacionBancaria = tipoDeOperacionBancaria;
     }
 
+    public Solicitud getSolicitud() {
+        return solicitud;
+    }
+
+    public void setSolicitud(Solicitud solicitud) {
+        this.solicitud = solicitud;
+    }
+
+    public Divisa getDivisa() {
+        return divisa;
+    }
+
+    public void setDivisa(Divisa divisa) {
+        this.divisa = divisa;
+    }
+
     @Override
     public String toString() {
-        return "OperacionBancaria{" + "tipoDeOperacionBancaria=" + tipoDeOperacionBancaria + '}';
+        return "OperacionBancaria{" + "tipoDeOperacionBancaria=" + tipoDeOperacionBancaria + ", solicitud=" + solicitud + ", divisa=" + divisa + '}';
     }
     
+
 }

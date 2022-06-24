@@ -23,11 +23,20 @@ public abstract class Persona {
     }
         
     public Persona(String cedula, String nombre, String sexo) {
+        this();
         this.cedula = cedula;
         this.nombre = nombre;
         this.sexo = sexo;
     }
 
+    public Persona(String cedula, String nombre, String sexo, Banco banco) {
+        this(cedula, nombre, sexo);
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.sexo = sexo;
+        this.banco = banco;
+    }
+    
     
     public String getCedula() {
         return cedula;
@@ -49,8 +58,21 @@ public abstract class Persona {
         return sexo;
     }
 
+    public Banco getBanco() {
+        return banco;
+    }
+
+    public void setBanco(Banco banco) {
+        this.banco = banco;
+    }
+    
     public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" + "cedula=" + cedula + ", nombre=" + nombre + ", sexo=" + sexo + ", banco=" + banco + '}';
     }
     
     

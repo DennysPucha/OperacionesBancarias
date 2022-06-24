@@ -40,6 +40,45 @@ public class Solicitud {
         this.recibo = recibo;
     }
 
+    public Solicitud(Historial historial, List<Cuenta> cuentaList, List<Prestamo> prestamoList, List<OperacionBancaria> operacionBancariaList) {
+        this.historial = historial;
+        this.cuentaList = cuentaList;
+        this.prestamoList = prestamoList;
+        this.operacionBancariaList = operacionBancariaList;
+    }
+
+    public Historial getHistorial() {
+        return historial;
+    }
+
+    public void setHistorial(Historial historial) {
+        this.historial = historial;
+    }
+
+    public List<Cuenta> getCuentaList() {
+        return cuentaList;
+    }
+
+    public void setCuentaList(List<Cuenta> cuentaList) {
+        this.cuentaList = cuentaList;
+    }
+
+    public List<Prestamo> getPrestamoList() {
+        return prestamoList;
+    }
+
+    public void setPrestamoList(List<Prestamo> prestamoList) {
+        this.prestamoList = prestamoList;
+    }
+
+    public List<OperacionBancaria> getOperacionBancariaList() {
+        return operacionBancariaList;
+    }
+
+    public void setOperacionBancariaList(List<OperacionBancaria> operacionBancariaList) {
+        this.operacionBancariaList = operacionBancariaList;
+    }
+    
     public Recibo getRecibo() {
         return recibo;
     }
@@ -74,8 +113,8 @@ public class Solicitud {
 
     @Override
     public String toString() {
-        return "Solicitud{" + "cliente=" + cliente + ", cuenta=" + cuenta + ", registro=" + registro + '}';
+        return "Solicitud{" + "cliente=" + cliente + ", cuenta=" + cuenta + ", registro=" + registro + ", recibo=" + recibo + ", historial=" + historial + '}';
     }
-    
+
     
 }

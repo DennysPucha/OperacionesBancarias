@@ -43,6 +43,29 @@ public abstract class Cuenta {
         this.nroCuenta = nroCuenta;
         this.orientacionCuenta = orientacionCuenta;
     }
+
+    public Cuenta(OrientacionDeCuenta orientacionCuenta, Registro registro, Solicitud solicitud) {
+        this();
+        this.orientacionCuenta = orientacionCuenta;
+        this.registro = registro;
+        this.solicitud = solicitud;
+    }
+
+    public Registro getRegistro() {
+        return registro;
+    }
+
+    public void setRegistro(Registro registro) {
+        this.registro = registro;
+    }
+
+    public Solicitud getSolicitud() {
+        return solicitud;
+    }
+
+    public void setSolicitud(Solicitud solicitud) {
+        this.solicitud = solicitud;
+    }
     
 
     public Float getCantDinero() {
@@ -87,7 +110,9 @@ public abstract class Cuenta {
 
     @Override
     public String toString() {
-        return "Cuenta{" + "cantDinero=" + cantDinero + ", id=" + id + ", Intereses=" + Intereses + ", nroCuenta=" + nroCuenta + ", orientacionCuenta=" + orientacionCuenta + '}';
+        return "Cuenta{" + "cantDinero=" + cantDinero + ", id=" + id + ", Intereses=" + Intereses + ", nroCuenta=" + nroCuenta + '}';
     }
+
+
 
 }

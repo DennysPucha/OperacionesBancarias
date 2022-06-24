@@ -34,6 +34,22 @@ public class Registro {
         this.cliente = cliente;
     }
 
+    public Solicitud getSolicitud() {
+        return solicitud;
+    }
+
+    public void setSolicitud(Solicitud solicitud) {
+        this.solicitud = solicitud;
+    }
+
+    public List<Cuenta> getCuentaList() {
+        return cuentaList;
+    }
+
+    public void setCuentaList(List<Cuenta> cuentaList) {
+        this.cuentaList = cuentaList;
+    }
+    
     public Cliente getCliente() {
         return cliente;
     }
@@ -60,7 +76,10 @@ public class Registro {
 
     @Override
     public String toString() {
-        return "Registro{" + "contrasenia=" + contrasenia + ", nroCuenta=" + nroCuenta + '}';
+        return "Registro{" + "contrasenia=" + contrasenia + ", nroCuenta=" + nroCuenta + ", cliente=" + cliente + ", solicitud=" + solicitud + '}';
     }
+
+
+
     
 }

@@ -27,6 +27,14 @@ public class Banco {
         this.nombre = nombre;
     }
 
+    public List<Persona> getPersonaList() {
+        return personaList;
+    }
+
+    public void setPersonaList(List<Persona> personaList) {
+        this.personaList = personaList;
+    }
+
     public String getDireccion() {
         return direccion;
     }
@@ -45,7 +53,7 @@ public class Banco {
 
     @Override
     public String toString() {
-        return "Banco{" + "direccion=" + direccion + ", nombre=" + nombre + '}';
+        return "Banco{" + "direccion=" + direccion + ", nombre=" + nombre + ", personaList=" + personaList + '}';
     }
-    
+
 }

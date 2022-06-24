@@ -25,6 +25,13 @@ public class Prestamo {
         this.tipoDePrestamo = tipoDePrestamo;
     }
 
+    public Prestamo(String tipoDePrestamo, Solicitud solicitud, Divisa divisa) {
+        this();
+        this.tipoDePrestamo = tipoDePrestamo;
+        this.solicitud = solicitud;
+        this.divisa = divisa;
+    }
+    
     public String getMonto() {
         return monto;
     }
@@ -49,9 +56,25 @@ public class Prestamo {
         this.tipoDePrestamo = tipoDePrestamo;
     }
 
+    public Solicitud getSolicitud() {
+        return solicitud;
+    }
+
+    public void setSolicitud(Solicitud solicitud) {
+        this.solicitud = solicitud;
+    }
+
+    public Divisa getDivisa() {
+        return divisa;
+    }
+
+    public void setDivisa(Divisa divisa) {
+        this.divisa = divisa;
+    }
+
     @Override
     public String toString() {
-        return "Prestamo{" + "monto=" + monto + ", plazo=" + plazo + ", tipoDePrestamo=" + tipoDePrestamo + '}';
+        return "Prestamo{" + "monto=" + monto + ", plazo=" + plazo + ", tipoDePrestamo=" + tipoDePrestamo + ", solicitud=" + solicitud + ", divisa=" + divisa + '}';
     }
     
 }

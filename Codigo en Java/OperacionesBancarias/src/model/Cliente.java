@@ -35,6 +35,22 @@ public abstract class Cliente extends Persona{
         super(nombre, banco);
         this.numeroCuenta = numeroCuenta;
     }
+
+    public List<Recibo> getReciboList() {
+        return reciboList;
+    }
+
+    public void setReciboList(List<Recibo> reciboList) {
+        this.reciboList = reciboList;
+    }
+
+    public List<Registro> getRegistroList() {
+        return registroList;
+    }
+
+    public void setRegistroList(List<Registro> registroList) {
+        this.registroList = registroList;
+    }
     
     
     public String getCorreo() {
@@ -65,5 +81,6 @@ public abstract class Cliente extends Persona{
     public String toString() {
         return "Cliente{" + "correo=" + correo + ", numeroCuenta=" + numeroCuenta + ", numeroTelefono=" + numeroTelefono + '}';
     }
-    
+
+
 }
