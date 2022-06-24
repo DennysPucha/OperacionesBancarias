@@ -11,10 +11,11 @@ import java.util.List;
  *
  * @author Dennys
  */
-public abstract class Cliente extends Persona{
+public class Cliente extends Persona{
     private String correo;
     private String numeroCuenta;
     private String numeroTelefono;
+    private TipoDeCliente tipodeCliente;
     private List<Recibo> reciboList;
     private List<Registro> registroList;
     
@@ -36,6 +37,11 @@ public abstract class Cliente extends Persona{
         this.numeroCuenta = numeroCuenta;
     }
 
+    public Cliente(TipoDeCliente tipodeCliente) {
+        this();
+        this.tipodeCliente = tipodeCliente;
+    }
+    
     public List<Recibo> getReciboList() {
         return reciboList;
     }
@@ -50,6 +56,14 @@ public abstract class Cliente extends Persona{
 
     public void setRegistroList(List<Registro> registroList) {
         this.registroList = registroList;
+    }
+
+    public TipoDeCliente getTipodeCliente() {
+        return tipodeCliente;
+    }
+
+    public void setTipodeCliente(TipoDeCliente tipodeCliente) {
+        this.tipodeCliente = tipodeCliente;
     }
     
     

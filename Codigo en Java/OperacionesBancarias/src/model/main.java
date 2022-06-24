@@ -12,7 +12,10 @@ public class main {
 
   
     public static void main(String[] args) {
-        Banco banco=new Banco("000", "Bancosur");
+        Banco b1=new Banco("000", "Bancosur");
+        Cliente c1=new Cliente("11000100", "Juan", b1);
+        
+        
     }
     
 }

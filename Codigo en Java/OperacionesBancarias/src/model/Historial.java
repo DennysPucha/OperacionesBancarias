@@ -27,9 +27,5 @@ public class Historial {
         this.solicitudList = solicitudList;
     }
 
-    @Override
-    public String toString() {
-        return "Historial{" + "solicitudList=" + solicitudList + '}';
-    }
-   
+    
 }

@@ -21,7 +21,7 @@ public class Recibo {
         this.cliente = cliente;
         this.solicitud = solicitud;
     }
-
+    
     public Cliente getCliente() {
         return cliente;
     }
