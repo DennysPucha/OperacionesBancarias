@@ -9,5 +9,27 @@ package model;
  * @author Dennys
  */
 public class OperacionBancaria {
+    private TipoDeOperacionBancaria tipoDeOperacionBancaria;
+
+    public OperacionBancaria() {
+    }
+
+    public OperacionBancaria(TipoDeOperacionBancaria tipoDeOperacionBancaria) {
+        this();
+        this.tipoDeOperacionBancaria = tipoDeOperacionBancaria;
+    }
+
+    public TipoDeOperacionBancaria getTipoDeOperacionBancaria() {
+        return tipoDeOperacionBancaria;
+    }
+
+    public void setTipoDeOperacionBancaria(TipoDeOperacionBancaria tipoDeOperacionBancaria) {
+        this.tipoDeOperacionBancaria = tipoDeOperacionBancaria;
+    }
+
+    @Override
+    public String toString() {
+        return "OperacionBancaria{" + "tipoDeOperacionBancaria=" + tipoDeOperacionBancaria + '}';
+    }
     
 }
