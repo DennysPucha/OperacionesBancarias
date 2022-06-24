@@ -10,5 +10,23 @@ package model;
  */
 
 public class Historial {
-    
+   private Solicitud solicitud;
+
+    public Historial(Solicitud solicitud) {
+        this.solicitud = solicitud;
+    }
+
+    public Solicitud getSolicitud() {
+        return solicitud;
+    }
+
+    public void setSolicitud(Solicitud solicitud) {
+        this.solicitud = solicitud;
+    }
+
+    @Override
+    public String toString() {
+        return "Historial{" + "solicitud=" + solicitud + '}';
+    }
+   
 }

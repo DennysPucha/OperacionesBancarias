@@ -12,7 +12,7 @@ public class main {
 
   
     public static void main(String[] args) {
-        
+        Banco banco=new Banco("000", "Bancosur");
     }
     
 }

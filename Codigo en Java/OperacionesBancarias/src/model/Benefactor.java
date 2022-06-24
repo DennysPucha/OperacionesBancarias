@@ -9,5 +9,9 @@ package model;
  * @author Dennys
  */
 public class Benefactor extends Cliente{
+
+    public Benefactor(String correo, String numeroCuenta, String numeroTelefono) {
+        super(correo, numeroCuenta, numeroTelefono);
+    }
     
 }
