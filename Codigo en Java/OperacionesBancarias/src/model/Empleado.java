@@ -26,6 +26,18 @@ public class Empleado extends Persona{
         this.cargo = cargo;
         this.tipoDeContrato = tipoDeContrato;
     }
+
+    public Empleado(String nombre, Banco banco) {
+        super(nombre, banco);
+    }
+
+    public Empleado(String cedula, String nombre, String sexo) {
+        super(cedula, nombre, sexo);
+    }
+
+    public Empleado(String cedula, String nombre, String sexo, Banco banco) {
+        super(cedula, nombre, sexo, banco);
+    }
     
     public String getCargo() {
         return cargo;

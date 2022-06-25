@@ -19,7 +19,7 @@ public class Solicitud {
     private Historial historial;
     private List<Cuenta> cuentaList;
     private List<Prestamo> prestamoList;
-    private List<OperacionBancaria> operacionBancariaList;
+    private OperacionBancaria operacionBancaria;
     
     public Solicitud() {
         cuentaList=new LinkedList<>();
@@ -40,11 +40,74 @@ public class Solicitud {
         this.recibo = recibo;
     }
 
-    public Solicitud(Historial historial, List<Cuenta> cuentaList, List<Prestamo> prestamoList, List<OperacionBancaria> operacionBancariaList) {
+    public Solicitud(Historial historial, List<Cuenta> cuentaList, List<Prestamo> prestamoList) {
         this.historial = historial;
         this.cuentaList = cuentaList;
         this.prestamoList = prestamoList;
-        this.operacionBancariaList = operacionBancariaList;
+    }
+    public void solicitarTransferencia(Cliente clienteBenefactor,Cliente clienteBeneficiario,Boolean ingresoAlRegistro,Float Cant,OperacionBancaria operacion,Divisa d1){
+    if(operacion.getTipoDeOperacionBancaria()==TipoDeOperacionBancaria.Transferencia)
+        if (ingresoAlRegistro=false){
+            System.out.println("Antes ingrese al Registro por favor");
+        }
+        else{
+            if(clienteBenefactor.getTipodeCliente()==TipoDeCliente.Benefactor&&clienteBeneficiario.getTipodeCliente()==TipoDeCliente.Beneficiario){
+                if(clienteBenefactor.getCuenta().getCantDinero()<Cant){
+                System.out.println("No existe dinero suficiente");
+                System.out.println("Cantidad de dinero del Cliente Benefactor -->"+clienteBenefactor.getNombre()+" "+clienteBenefactor.getCuenta().getCantDinero());
+            }
+            else{
+                clienteBenefactor.getCuenta().setCantDinero(clienteBenefactor.getCuenta().getCantDinero()-Cant);
+                clienteBeneficiario.getCuenta().setCantDinero(clienteBeneficiario.getCuenta().getCantDinero()+Cant);
+                System.out.println("Cantidad de dinero del Cliente Benefactor: "+clienteBenefactor.getNombre()+" "+clienteBenefactor.getCuenta().getCantDinero());
+                System.out.println("Cantidad de dinero del Cliente Beneficiario: "+clienteBeneficiario.getNombre()+ " "+clienteBeneficiario.getCuenta().getCantDinero());
+            } 
+            }
+            else{
+                System.out.println("Los clientes no son del tipo Beneficario-Benefactor");
+            }
+        }
+    else{
+        System.out.println("Seleccione correctamente la operacion a realizar");
+    }
+    
+}
+    public void solicitarRetiro(Cliente cliente,Boolean ingresoAlRegistro,Float Cant){
+        if (ingresoAlRegistro==true) {
+            if (cliente.getCuenta().getCantDinero()<Cant) {
+                System.out.println("No dispone de la cantidad de dinero necesaria");
+            }
+            else{
+                cliente.getCuenta().setCantDinero(cliente.getCuenta().getCantDinero()-Cant);
+                System.out.println("Cantidad disponible luego del retiro: "+ cliente.getCuenta().getCantDinero());
+            }   
+        }
+        else{
+            System.out.println("Antes ingrese al Registro por favor");
+        }
+    }
+    public void SolicitarDeposito(Cliente benefactor,Cliente beneficiario,Float Cant,Boolean ingresoAlRegistro,Boolean BenefactorDispuestoAPagar){
+        if (ingresoAlRegistro==true) {
+            if(benefactor.getTipodeCliente()==TipoDeCliente.Benefactor&&beneficiario.getTipodeCliente()==TipoDeCliente.Beneficiario){
+            if (BenefactorDispuestoAPagar==true) {
+                if (benefactor.getCuenta().getCantDinero()>Cant) {
+                    benefactor.getCuenta().setCantDinero(benefactor.getCuenta().getCantDinero()-Cant);
+                    beneficiario.getCuenta().setCantDinero(beneficiario.getCuenta().getCantDinero()+Cant);
+                     System.out.println("Cantidad de dinero del Cliente Benefactor: "+ benefactor.getNombre()+" "+benefactor.getCuenta().getCantDinero());
+                     System.out.println("Cantidad de dinero del Cliente Beneficiario: "+ beneficiario.getNombre()+ " "+beneficiario.getCuenta().getCantDinero());
+                }
+                else{
+                    System.out.println("no cuenta con el dinero suficiente");
+                }
+                }
+            }
+            else{
+                System.out.println("Los clientes no son del tipo Beneficario-Benefactor");
+            }
+        }
+        else{
+            System.out.println("Antes ingrese al Registro por favor");
+        }
     }
 
     public Historial getHistorial() {
@@ -71,14 +134,6 @@ public class Solicitud {
         this.prestamoList = prestamoList;
     }
 
-    public List<OperacionBancaria> getOperacionBancariaList() {
-        return operacionBancariaList;
-    }
-
-    public void setOperacionBancariaList(List<OperacionBancaria> operacionBancariaList) {
-        this.operacionBancariaList = operacionBancariaList;
-    }
-    
     public Recibo getRecibo() {
         return recibo;
     }

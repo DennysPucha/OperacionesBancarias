@@ -8,7 +8,7 @@ package model;
  *
  * @author Dennys
  */
-public abstract class Cuenta {
+public class Cuenta {
     private Float cantDinero;
     private Integer id;
     private Boolean Intereses;
@@ -16,6 +16,7 @@ public abstract class Cuenta {
     private OrientacionDeCuenta orientacionCuenta;
     private Registro registro;
     private Solicitud solicitud;
+    private Cliente cliente;
 
     public Cuenta() {
     }
@@ -51,6 +52,36 @@ public abstract class Cuenta {
         this.solicitud = solicitud;
     }
 
+    public Cuenta(Float cantDinero, Integer id, Cliente cliente) {
+        this();
+        this.cantDinero = cantDinero;
+        this.id = id;
+        this.cliente = cliente;
+    }
+
+    public Cuenta(Float cantDinero, Boolean Intereses, String nroCuenta, Cliente cliente) {
+        this();
+        this.cantDinero = cantDinero;
+        this.Intereses = Intereses;
+        this.nroCuenta = nroCuenta;
+        this.cliente = cliente;
+    }
+
+    public Cuenta(OrientacionDeCuenta orientacionCuenta, Cliente cliente) {
+        this.orientacionCuenta = orientacionCuenta;
+        this.cliente = cliente;
+    }
+    
+    
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+    
+    
     public Registro getRegistro() {
         return registro;
     }

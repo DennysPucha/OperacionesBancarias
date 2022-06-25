@@ -9,7 +9,7 @@ package model;
  * @author Dennys
  */
 public class Prestamo {
-    private String monto;
+    private Float monto;
     private Integer plazo;
     private String tipoDePrestamo;
     private Solicitud solicitud;
@@ -18,7 +18,7 @@ public class Prestamo {
     public Prestamo() {
     }
 
-    public Prestamo(String monto, Integer plazo, String tipoDePrestamo) {
+    public Prestamo(Float monto, Integer plazo, String tipoDePrestamo) {
         this();
         this.monto = monto;
         this.plazo = plazo;
@@ -32,11 +32,11 @@ public class Prestamo {
         this.divisa = divisa;
     }
     
-    public String getMonto() {
+    public Float getMonto() {
         return monto;
     }
 
-    public void setMonto(String monto) {
+    public void setMonto(Float monto) {
         this.monto = monto;
     }
 

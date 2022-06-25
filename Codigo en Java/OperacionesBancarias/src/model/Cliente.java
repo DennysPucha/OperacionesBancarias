@@ -17,13 +17,14 @@ public class Cliente extends Persona{
     private String numeroTelefono;
     private TipoDeCliente tipodeCliente;
     private List<Recibo> reciboList;
-    private List<Registro> registroList;
-    
+    private Registro registro;
+    private Cuenta cuenta;
+            
+            
     public Cliente() {
         reciboList=new LinkedList<>();
-        registroList=new LinkedList<>();
     }
-
+    
     
     public Cliente(String correo, String numeroCuenta, String numeroTelefono) {
         this();
@@ -41,6 +42,24 @@ public class Cliente extends Persona{
         this();
         this.tipodeCliente = tipodeCliente;
     }
+
+    public Cliente(String cedula, String nombre, String sexo, Banco banco) {
+        super(cedula, nombre, sexo, banco);
+    }
+
+    public Cliente(String numeroCuenta, Cuenta cuenta) {
+        this.numeroCuenta = numeroCuenta;
+        this.cuenta = cuenta;
+    }
+
+    public Cuenta getCuenta() {
+        return cuenta;
+    }
+
+    public void setCuenta(Cuenta cuenta) {
+        this.cuenta = cuenta;
+    }
+    
     
     public List<Recibo> getReciboList() {
         return reciboList;
@@ -50,13 +69,14 @@ public class Cliente extends Persona{
         this.reciboList = reciboList;
     }
 
-    public List<Registro> getRegistroList() {
-        return registroList;
+    public Registro getRegistro() {
+        return registro;
     }
 
-    public void setRegistroList(List<Registro> registroList) {
-        this.registroList = registroList;
+    public void setRegistro(Registro registro) {
+        this.registro = registro;
     }
+
 
     public TipoDeCliente getTipodeCliente() {
         return tipodeCliente;

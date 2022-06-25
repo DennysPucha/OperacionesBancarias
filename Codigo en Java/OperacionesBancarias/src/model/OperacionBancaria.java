@@ -26,6 +26,9 @@ public class OperacionBancaria {
         this.solicitud = solicitud;
         this.divisa = divisa;
     }
+    public void realizarOperacionBancaria(OperacionBancaria operacionBancaria){
+        
+    }
     
     public TipoDeOperacionBancaria getTipoDeOperacionBancaria() {
         return tipoDeOperacionBancaria;
