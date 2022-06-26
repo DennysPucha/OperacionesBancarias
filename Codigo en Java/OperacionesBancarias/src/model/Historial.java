@@ -4,29 +4,38 @@
  */
 package model;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  *
  * @author Dennys
  */
 
 public class Historial {
-   private Solicitud solicitud;
+   private List<Solicitud> solicitudList;
 
-    public Historial(Solicitud solicitud) {
-        this.solicitud = solicitud;
-    }
-
-    public Solicitud getSolicitud() {
-        return solicitud;
-    }
-
-    public void setSolicitud(Solicitud solicitud) {
-        this.solicitud = solicitud;
-    }
-
-    @Override
-    public String toString() {
-        return "Historial{" + "solicitud=" + solicitud + '}';
+    public Historial() {
+        solicitudList=new LinkedList<>();
     }
    
+    public Historial(List<Solicitud> solicitudList) {
+        this();
+        this.solicitudList = solicitudList;
+    }
+    public void generarHistorial(){
+        for (int i = 0; i < this.solicitudList.size(); i++) {
+            System.out.println(this.solicitudList.get(i).toString());   
+        }
+    } 
+
+    public List<Solicitud> getSolicitudList() {
+        return solicitudList;
+    }
+
+    public void setSolicitudList(List<Solicitud> solicitudList) {
+        this.solicitudList = solicitudList;
+    }
+
+    
 }

@@ -9,5 +9,21 @@ package model;
  * @author Dennys
  */
 public enum TipoDeContrato {
+    Finito,Temporal,Fijo,Aprendizaje;
     
+    public static TipoDeContrato getFinito() {
+        return Finito;
+    }
+
+    public static TipoDeContrato getTemporal() {
+        return Temporal;
+    }
+
+    public static TipoDeContrato getFijo() {
+        return Fijo;
+    }
+
+    public static TipoDeContrato getAprendizaje() {
+        return Aprendizaje;
+    }
 }

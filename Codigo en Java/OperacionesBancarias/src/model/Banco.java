@@ -4,22 +4,35 @@
  */
 package model;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  *
  * @author Dennys
  */
 public class Banco {
+    
     private String direccion;
     private String nombre;
-
+    private List<Persona> personaList;
+    
     public Banco() {
-        
+        personaList=new LinkedList<>();
     }
 
     public Banco(String direccion, String nombre) {
         this();
         this.direccion = direccion;
         this.nombre = nombre;
+    }
+
+    public List<Persona> getPersonaList() {
+        return personaList;
+    }
+
+    public void setPersonaList(List<Persona> personaList) {
+        this.personaList = personaList;
     }
 
     public String getDireccion() {
@@ -40,9 +53,7 @@ public class Banco {
 
     @Override
     public String toString() {
-        return "Banco{" + "direccion=" + direccion + ", nombre=" + nombre + '}';
+        return "Banco{" + "direccion=" + direccion + ", nombre=" + nombre + ", personaList=" + personaList + '}';
     }
-    
-    
-    
+
 }
