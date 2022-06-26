@@ -32,6 +32,16 @@ public class Prestamo {
         this.divisa = divisa;
     }
     
+    public Float generarIntereses(Float monto, Integer plazo){
+        monto=monto/plazo;
+        monto=monto*0.2f;
+        return monto;
+    }
+    public Float generarMontoAPagar(Float monto,Integer plazo){
+        monto=generarIntereses(monto, plazo)+monto;
+        return monto;
+    }
+    
     public Float getMonto() {
         return monto;
     }

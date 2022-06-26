@@ -4,17 +4,24 @@
  */
 package model;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  *
  * @author Dennys
  */
-public abstract class Persona {
+public class Persona {
     private String cedula;
     private String nombre;
     private String sexo;
     private Banco banco;
+    private List<Empleado> empleadoList;
+    private List<Cliente> clienteList;
     
     public Persona() {
+        this.clienteList=new LinkedList<>();
+        this.empleadoList=new LinkedList<>();
     }
     public Persona(String nombre, Banco banco) {
         this();
@@ -37,6 +44,16 @@ public abstract class Persona {
         this.banco = banco;
     }
     
+    public void listarEmpleados(){
+        for (int i = 0; i < this.empleadoList.size(); i++) {
+            System.out.println(this.empleadoList.get(i).toString());   
+        }
+    }
+    public void listarClientes(){
+        for (int i = 0; i < this.clienteList.size(); i++) {
+            System.out.println(this.clienteList.get(i).toString());   
+        }
+    }
     
     public String getCedula() {
         return cedula;
@@ -70,10 +87,22 @@ public abstract class Persona {
         this.sexo = sexo;
     }
 
-    @Override
-    public String toString() {
-        return "Persona{" + "cedula=" + cedula + ", nombre=" + nombre + ", sexo=" + sexo + ", banco=" + banco + '}';
+    public List<Empleado> getEmpleadoList() {
+        return empleadoList;
     }
+
+    public void setEmpleadoList(List<Empleado> empleadoList) {
+        this.empleadoList = empleadoList;
+    }
+
+    public List<Cliente> getClienteList() {
+        return clienteList;
+    }
+
+    public void setClienteList(List<Cliente> clienteList) {
+        this.clienteList = clienteList;
+    }
+    
     
     
 }

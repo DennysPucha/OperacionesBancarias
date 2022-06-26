@@ -45,20 +45,24 @@ public class Solicitud {
         this.cuentaList = cuentaList;
         this.prestamoList = prestamoList;
     }
-    public void solicitarTransferencia(Cliente clienteBenefactor,Cliente clienteBeneficiario,Boolean ingresoAlRegistro,Float Cant,OperacionBancaria operacion,Divisa d1){
+    public void solicitarTransferencia(Cliente clienteBenefactor,Cliente clienteBeneficiario,Boolean ingresoAlRegistro,OperacionBancaria operacion,Divisa divisa){
     if(operacion.getTipoDeOperacionBancaria()==TipoDeOperacionBancaria.Transferencia)
-        if (ingresoAlRegistro=false){
+        if (ingresoAlRegistro==false){
             System.out.println("Antes ingrese al Registro por favor");
         }
         else{
             if(clienteBenefactor.getTipodeCliente()==TipoDeCliente.Benefactor&&clienteBeneficiario.getTipodeCliente()==TipoDeCliente.Beneficiario){
-                if(clienteBenefactor.getCuenta().getCantDinero()<Cant){
+                if(clienteBenefactor.getCuenta().getCantDinero()<operacion.getMonto()){
                 System.out.println("No existe dinero suficiente");
                 System.out.println("Cantidad de dinero del Cliente Benefactor -->"+clienteBenefactor.getNombre()+" "+clienteBenefactor.getCuenta().getCantDinero());
             }
             else{
-                clienteBenefactor.getCuenta().setCantDinero(clienteBenefactor.getCuenta().getCantDinero()-Cant);
-                clienteBeneficiario.getCuenta().setCantDinero(clienteBeneficiario.getCuenta().getCantDinero()+Cant);
+                Float aux=divisa.valorDeDivisa(divisa, operacion.getMonto());
+                Float aux1=divisa.valorDeDivisa(divisa, clienteBenefactor.getCuenta().getCantDinero());
+                Float aux2=divisa.valorDeDivisa(divisa, clienteBeneficiario.getCuenta().getCantDinero());
+                clienteBenefactor.getCuenta().setCantDinero(aux1-aux);
+                clienteBeneficiario.getCuenta().setCantDinero(aux2+aux);
+                System.out.println("TRANFERENCIA REALIZADA");
                 System.out.println("Cantidad de dinero del Cliente Benefactor: "+clienteBenefactor.getNombre()+" "+clienteBenefactor.getCuenta().getCantDinero());
                 System.out.println("Cantidad de dinero del Cliente Beneficiario: "+clienteBeneficiario.getNombre()+ " "+clienteBeneficiario.getCuenta().getCantDinero());
             } 
@@ -72,44 +76,79 @@ public class Solicitud {
     }
     
 }
-    public void solicitarRetiro(Cliente cliente,Boolean ingresoAlRegistro,Float Cant){
-        if (ingresoAlRegistro==true) {
-            if (cliente.getCuenta().getCantDinero()<Cant) {
-                System.out.println("No dispone de la cantidad de dinero necesaria");
-            }
-            else{
-                cliente.getCuenta().setCantDinero(cliente.getCuenta().getCantDinero()-Cant);
-                System.out.println("Cantidad disponible luego del retiro: "+ cliente.getCuenta().getCantDinero());
-            }   
-        }
-        else{
-            System.out.println("Antes ingrese al Registro por favor");
-        }
-    }
-    public void SolicitarDeposito(Cliente benefactor,Cliente beneficiario,Float Cant,Boolean ingresoAlRegistro,Boolean BenefactorDispuestoAPagar){
-        if (ingresoAlRegistro==true) {
-            if(benefactor.getTipodeCliente()==TipoDeCliente.Benefactor&&beneficiario.getTipodeCliente()==TipoDeCliente.Beneficiario){
-            if (BenefactorDispuestoAPagar==true) {
-                if (benefactor.getCuenta().getCantDinero()>Cant) {
-                    benefactor.getCuenta().setCantDinero(benefactor.getCuenta().getCantDinero()-Cant);
-                    beneficiario.getCuenta().setCantDinero(beneficiario.getCuenta().getCantDinero()+Cant);
-                     System.out.println("Cantidad de dinero del Cliente Benefactor: "+ benefactor.getNombre()+" "+benefactor.getCuenta().getCantDinero());
-                     System.out.println("Cantidad de dinero del Cliente Beneficiario: "+ beneficiario.getNombre()+ " "+beneficiario.getCuenta().getCantDinero());
+    public void solicitarRetiro(Cliente cliente,Boolean ingresoAlRegistro,OperacionBancaria operacion,Divisa divisa){
+        if(operacion.getTipoDeOperacionBancaria()==TipoDeOperacionBancaria.Retiro){
+            if (ingresoAlRegistro==true) {
+                if (cliente.getCuenta().getCantDinero()<operacion.getMonto()) {
+                    System.out.println("No dispone de la cantidad de dinero necesaria");
                 }
                 else{
-                    System.out.println("no cuenta con el dinero suficiente");
+                    Float aux1=divisa.valorDeDivisa(divisa, cliente.getCuenta().getCantDinero());
+                    Float aux=aux1-divisa.valorDeDivisa(divisa, operacion.getMonto());
+                    cliente.getCuenta().setCantDinero(aux);
+                    System.out.println("Cantidad disponible luego del retiro: "+ cliente.getCuenta().getCantDinero());
+                }   
+            }
+            else{
+                System.out.println("Antes ingrese al Registro por favor");
+            }
+        }
+        else{
+            System.out.println("Seleccione correctamente la operacion a realizar");
+        }
+    }
+    public void SolicitarDeposito(Cliente benefactor,Cliente beneficiario,Boolean ingresoAlRegistro,Boolean BenefactorDispuestoAPagar,OperacionBancaria operacion,Divisa divisa){
+        if (operacion.getTipoDeOperacionBancaria()==TipoDeOperacionBancaria.Deposito) {
+            if (ingresoAlRegistro==true) {
+                if(benefactor.getTipodeCliente()==TipoDeCliente.Benefactor&&beneficiario.getTipodeCliente()==TipoDeCliente.Beneficiario){
+                if (BenefactorDispuestoAPagar==true) {
+                    if (benefactor.getCuenta().getCantDinero()>operacion.getMonto()) {
+                        Float aux1=divisa.valorDeDivisa(divisa, benefactor.getCuenta().getCantDinero());
+                        Float aux2=divisa.valorDeDivisa(divisa, beneficiario.getCuenta().getCantDinero());
+                        Float aux=divisa.valorDeDivisa(divisa, operacion.getMonto());
+                        benefactor.getCuenta().setCantDinero(aux1-aux);
+                        beneficiario.getCuenta().setCantDinero(aux2+aux);
+                         System.out.println("Cantidad de dinero del Cliente Benefactor: "+ benefactor.getNombre()+" "+benefactor.getCuenta().getCantDinero());
+                         System.out.println("Cantidad de dinero del Cliente Beneficiario: "+ beneficiario.getNombre()+ " "+beneficiario.getCuenta().getCantDinero());
+                    }
+                    else{
+                        System.out.println("no cuenta con el dinero suficiente");
+                    }
+                    }
                 }
+                else{
+                    System.out.println("Los clientes no son del tipo Beneficario-Benefactor");
                 }
             }
             else{
-                System.out.println("Los clientes no son del tipo Beneficario-Benefactor");
+                System.out.println("Antes ingrese al Registro por favor");
             }
+        }
+        else{
+            System.out.println("Seleccione correctamente la operacion a realizar");
+        }
+    }
+    public void solicitarPrestamo(Prestamo prestamo,Boolean verificiacion,Divisa divisa){
+        if (verificiacion==true) {
+            Float n=divisa.valorDeDivisa(divisa, prestamo.getMonto());
+            Float aux1=prestamo.generarIntereses(n, prestamo.getPlazo());
+            System.out.println("Intereses del prestamo: "+aux1);
+            Float aux2=prestamo.generarMontoAPagar(n,prestamo.getPlazo());
+            System.out.println("Monto a pagar: "+aux2);    
         }
         else{
             System.out.println("Antes ingrese al Registro por favor");
         }
     }
 
+    public OperacionBancaria getOperacionBancaria() {
+        return operacionBancaria;
+    }
+
+    public void setOperacionBancaria(OperacionBancaria operacionBancaria) {
+        this.operacionBancaria = operacionBancaria;
+    }
+    
     public Historial getHistorial() {
         return historial;
     }
@@ -168,8 +207,10 @@ public class Solicitud {
 
     @Override
     public String toString() {
-        return "Solicitud{" + "cliente=" + cliente + ", cuenta=" + cuenta + ", registro=" + registro + ", recibo=" + recibo + ", historial=" + historial + '}';
+        return "Solicitud{" + "cliente=" + cliente + ", cuenta=" + cuenta + ", registro=" + registro + ", recibo=" + recibo + ", operacionBancaria=" + operacionBancaria + '}';
     }
+
+   
 
     
 }

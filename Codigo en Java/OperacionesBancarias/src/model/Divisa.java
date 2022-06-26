@@ -27,7 +27,27 @@ public class Divisa {
         this.operacionBancaria = operacionBancaria;
         this.prestamo = prestamo;
     }
-
+    public Float valorDeDivisa(Divisa divisa,Float cant){
+        switch (divisa.getTipoDeDivisa()) {
+            case Euro -> {
+                return  cant*0.95f;
+            }
+            case Dolar -> {
+                return cant*1f;
+            }
+            case YenJapones -> {
+                return cant*135.21f;
+            }
+            case FrancoSuizo -> {
+                return cant*0.96f;
+            }
+            case LibraEsterlina -> {
+                return cant*0.82f;
+            }
+            default -> throw new AssertionError();
+        }
+    }
+    
     public OperacionBancaria getOperacionBancaria() {
         return operacionBancaria;
     }

@@ -141,7 +141,7 @@ public class Cuenta {
 
     @Override
     public String toString() {
-        return "Cuenta{" + "cantDinero=" + cantDinero + ", id=" + id + ", Intereses=" + Intereses + ", nroCuenta=" + nroCuenta + '}';
+        return "cantDinero=" + cantDinero + "  nroCuenta=" + nroCuenta;
     }
 
 

@@ -4,6 +4,7 @@
  */
 package model;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -14,10 +15,19 @@ import java.util.List;
 public class Historial {
    private List<Solicitud> solicitudList;
 
-    public Historial(List<Solicitud> solicitudList) {
-        this.solicitudList = solicitudList;
+    public Historial() {
+        solicitudList=new LinkedList<>();
     }
    
+    public Historial(List<Solicitud> solicitudList) {
+        this();
+        this.solicitudList = solicitudList;
+    }
+    public void generarHistorial(){
+        for (int i = 0; i < this.solicitudList.size(); i++) {
+            System.out.println(this.solicitudList.get(i).toString());   
+        }
+    } 
 
     public List<Solicitud> getSolicitudList() {
         return solicitudList;
