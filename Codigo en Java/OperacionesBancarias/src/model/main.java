@@ -78,11 +78,11 @@ public class main {
         
         p1.getEmpleadoList().add(e1);
         p1.getEmpleadoList().add(e2);
-        //p1.listarEmpleados();
+        p1.listarEmpleados();
         
         p1.getClienteList().add(c1);
         p1.getClienteList().add(c2);
-        //p1.listarClientes();
+        p1.listarClientes();
         
         h1.generarHistorial();
     }
