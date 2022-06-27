@@ -204,60 +204,20 @@ footer h3{
         padding-left: 50px;
         padding-right: 0px;
     }
-    #DiagramaImg1 .serieImagen1{
-        background-image: url("img/diagrama/P1.png");
-        background-size: cover;
-        background-position: center center;
-        height: 400px;
-        width: 400px;
+    .serieImagen1 img{
+        height: auto;
+        width: auto;
+        max-height:1800px;
+        max-width:1300px;
     }
-    #DiagramaImg1 {
-        padding: 25px 25px;
+    .serieImagen1 {
+        padding: 20px 20px;
+        justify-content: center;
+        position: relative;
         display: flex;
+        flex-direction: row;
+        
     }
-    #DiagramaImg1 .text1{
-        width: 60%;
-        text-align: justify;
-        padding-left: 50px;
-        padding-right: 0px;
-     }
-
-     #DiagramaImg2 .serieImagen2{
-        background-image: url("img/diagrama/P2.png");
-        background-size: cover;
-        background-position: center center;
-        height: 400px;
-        width: 400px;
-    }
-    #DiagramaImg2 {
-        padding: 25px 25px;
-        display: flex;
-    }
-    #DiagramaImg2 .text2{
-        width: 60%;
-        text-align: justify;
-        padding-left: 50px;
-        padding-right: 0px;
-     }
-
-    #DiagramaImg3 .serieImagen3{
-        background-image: url("img/diagrama/P3.png");
-        background-size: cover;
-        background-position: center center;
-        height: 400px;
-        width: 400px;
-    }
-    #DiagramaImg3 {
-        padding: 25px 25px;
-        display: flex;
-    }
-    #DiagramaImg3 .text3{
-        width: 60%;
-        text-align: justify;
-        padding-left: 50px;
-        padding-right: 0px;
-        padding-bottom: 70px;
-     }
      .container #logoimg{
         height: 70px;
         width: 120px;
@@ -343,8 +303,8 @@ footer h3{
     }
     #Funcionalidades .lista {
         font-size:1.7em;
-        padding-top: 50px;
+        padding-top: 5px;
         padding-right: 50px;
-        padding-bottom: 70px;
+        padding-bottom: 5px;
     }
 }
