@@ -379,7 +379,7 @@ public class Banco extends javax.swing.JFrame {
 
         lblSaldo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblSaldo.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblSaldo.setText("$100 Dolares");
+        lblSaldo.setText("$0 Dolares");
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel16.setText("SALDO:");
