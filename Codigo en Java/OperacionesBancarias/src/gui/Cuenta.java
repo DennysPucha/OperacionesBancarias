@@ -1,13 +1,49 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package gui;
+
+import java.util.ArrayList;
 
 /**
  *
- * @author USER
+ * @author Luis Hidalgo
  */
 public class Cuenta {
+    String tipoCuenta;
+    double montoinicial;
+    ArrayList<Movimiento> mismovimientos;
+
+    public Cuenta() {
+        mismovimientos=new ArrayList<Movimiento>();
+        
+    }
+    public void addMovimiento(Movimiento m){
+        mismovimientos.add(m);
+    }
+
+
+    public ArrayList<Movimiento> getMismovimientos() {
+        return mismovimientos;
+    }
+
+    public void setMismovimientos(ArrayList<Movimiento> mismovimientos) {
+        this.mismovimientos = mismovimientos;
+    }
+    
+
+    public String getTipoCuenta() {
+        return tipoCuenta;
+    }
+
+    public void setTipoCuenta(String tipoCuenta) {
+        this.tipoCuenta = tipoCuenta;
+    }
+
+    public double getMontoinicial() {
+        return montoinicial;
+    }
+
+    public void setMontoinicial(double montoinicial) {
+        this.montoinicial = montoinicial;
+    }
     
 }
