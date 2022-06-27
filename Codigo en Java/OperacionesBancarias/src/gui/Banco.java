@@ -257,6 +257,11 @@ public class Banco extends javax.swing.JFrame {
         jLabel9.setText("Cliente:");
 
         cboConsultaTipoCuenta.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        cboConsultaTipoCuenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cboConsultaTipoCuentaActionPerformed(evt);
+            }
+        });
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setText("Tipo Cuenta:");
@@ -273,6 +278,11 @@ public class Banco extends javax.swing.JFrame {
         btnAgregarMovimiento.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnAgregarMovimiento.setText("Realizar Movimiento");
         btnAgregarMovimiento.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnAgregarMovimiento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarMovimientoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -456,6 +466,7 @@ public class Banco extends javax.swing.JFrame {
         borrarFormCuenta();
         refrescarComboCuentas();
         verMovimientos();
+        verDatos();
     }//GEN-LAST:event_btnAgregarCuentaActionPerformed
 
     public void refrescarComboCuentas(){
@@ -479,6 +490,26 @@ public class Banco extends javax.swing.JFrame {
         verMovimientos();
         verDatos();
     }//GEN-LAST:event_cboConsultaClienteActionPerformed
+
+    private void cboConsultaTipoCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboConsultaTipoCuentaActionPerformed
+        
+        verDatos();
+        verMovimientos();
+    }//GEN-LAST:event_cboConsultaTipoCuentaActionPerformed
+
+    private void btnAgregarMovimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarMovimientoActionPerformed
+        cliente=listaClientes.get(cboConsultaCliente.getSelectedIndex());
+        cuenta=cliente.getMiscuentas().get(cboConsultaTipoCuenta.getSelectedIndex());
+        Movimiento m= new Movimiento();
+        m.setFechaMovimiento(new SimpleDateFormat("dd/MM/yyyy").format(new Date()));
+        m.setTipoMovimiento(cboTipoMovimiento.getSelectedItem().toString());
+        double monto=Double.parseDouble(txtMontoMovimiento.getText().toString());
+        monto=m.getTipoMovimiento().endsWith("DEPOSITO")?monto:(monto*-1);
+        m.setMonto(monto);
+        cuenta.addMovimiento(m);
+        verMovimientos();
+        
+    }//GEN-LAST:event_btnAgregarMovimientoActionPerformed
     public String aMoneda(double cantidad){
         cantidad=Math.round(cantidad*100.0)/100.0;
         DecimalFormat formato=new DecimalFormat("$ #,###.## USD");
@@ -495,10 +526,29 @@ public class Banco extends javax.swing.JFrame {
             cuenta=cliente.getMiscuentas().get(cboConsultaTipoCuenta.getSelectedIndex());
             lblTipoCuenta.setText(cuenta.getTipoCuenta());
             lblMontoInicial.setText(aMoneda(cuenta.getMontoinicial()));
+        }else{
+            lblTipoCuenta.setText("NO HAY CUENTA");
+            lblMontoInicial.setText("NO HAY CUENTA");
         }
     }
     public void verMovimientos(){
-        
+        cliente=listaClientes.get(cboConsultaCliente.getSelectedIndex());
+        cuenta=cliente.getMiscuentas().get(cboConsultaTipoCuenta.getSelectedIndex());
+        double saldo=0;
+        while(modelMovs.getRowCount()>0){
+            modelMovs.removeRow(0);
+        }
+        for (Movimiento m : cuenta.getMismovimientos()) {
+            Object mov[]=new Object[4];
+            mov[0]=cuenta.getTipoCuenta();
+            mov[1]=m.getFechaMovimiento();
+            mov[2]=m.getTipoMovimiento();
+            mov[3]=aMoneda(m.getMonto());
+            saldo+=m.getMonto();
+            modelMovs.addRow(mov);
+        }
+        tblMovimientos.setModel(modelMovs);
+        lblSaldo.setText(aMoneda(saldo));
     }
     public void llenarCombosTipoCuenta(){
         Object tipos[]=new Object[listaTipoCuenta.size()];
