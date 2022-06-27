@@ -8,14 +8,14 @@ package model;
  *
  * @author Dennys
  */
-public enum OrientacionDeCuenta {
-    CuentaCorriente,CuentaDeAhorros;
+public enum TipoDeCliente {
+    Beneficiario,Benefactor;
     
-    public static OrientacionDeCuenta getCuentaCorriente() {
-        return CuentaCorriente;
+    public static TipoDeCliente getBeneficiario() {
+        return Beneficiario;
     }
 
-    public static OrientacionDeCuenta getCuentaDeAhorros() {
-        return CuentaDeAhorros;
+    public static TipoDeCliente getBenefactor() {
+        return Benefactor;
     }
 }

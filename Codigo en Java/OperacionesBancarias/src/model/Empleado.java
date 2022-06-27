@@ -15,7 +15,6 @@ public class Empleado extends Persona{
     public Empleado() {
     }
 
-    
     public Empleado(String cargo, String cedula, String nombre, String sexo) {
         super(cedula, nombre, sexo);
         this.cargo = cargo;
@@ -25,6 +24,19 @@ public class Empleado extends Persona{
         this();
         this.cargo = cargo;
         this.tipoDeContrato = tipoDeContrato;
+    }
+    
+    
+    public Empleado(String nombre, Banco banco) {
+        super(nombre, banco);
+    }
+
+    public Empleado(String cedula, String nombre, String sexo) {
+        super(cedula, nombre, sexo);
+    }
+
+    public Empleado(String cedula, String nombre, String sexo, Banco banco) {
+        super(cedula, nombre, sexo, banco);
     }
     
     public String getCargo() {
@@ -42,11 +54,11 @@ public class Empleado extends Persona{
     public void setTipoDeContrato(TipoDeContrato tipoDeContrato) {
         this.tipoDeContrato = tipoDeContrato;
     }
-    
 
     @Override
     public String toString() {
-        return "Empleado{" + "cargo=" + cargo + ", tipoDeContrato=" + tipoDeContrato + '}';
+        return "Nombre: "+super.getNombre() + " Cargo: "+cargo + " Tipo de contrato: "+tipoDeContrato;
     }
+    
     
 }
