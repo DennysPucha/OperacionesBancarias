@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/USER/Desktop/Proyecto%20Final/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/gui/Banco.java</file>
-=======
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/Empleado.java</file>
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/Historial.java</file>
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/OperacionBancaria.java</file>
@@ -24,7 +20,6 @@
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/TipoDeOperacionBancaria.java</file>
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/Cliente.java</file>
             <file>file:/C:/Users/Dennys/Desktop/repositorio/OperacionesBancarias/Codigo%20en%20Java/OperacionesBancarias/src/model/Solicitud.java</file>
->>>>>>> develop
         </group>
     </open-files>
 </project-private>
