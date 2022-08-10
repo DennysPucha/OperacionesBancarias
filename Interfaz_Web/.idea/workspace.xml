@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fc76f7a-a637-43a4-881a-016aac51e342" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0002_cuenta_remove_cliente_nro_cuenta.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0003_cuenta_cliente_list_alter_registro_cliente_list.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0004_solicitud.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0005_prestamo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0006_alter_prestamo_monto.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0007_alter_prestamo_monto_alter_prestamo_plazo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0008_recibo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0002_alter_cuenta_nro_cuenta_alter_persona_tipo_de_sexo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0003_alter_empleado_tipo_de_contrato.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0004_solicitud_divisa_solicitud_monto_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0005_remove_prestamo_solicitud_prestamo_clientelist_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0006_prestamo_divisa.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0007_alter_persona_cedula.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Operaciones_Bancarias/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0002_cuenta_remove_cliente_nro_cuenta.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0003_cuenta_cliente_list_alter_registro_cliente_list.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0004_solicitud.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0005_prestamo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0006_alter_prestamo_monto.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0007_alter_prestamo_monto_alter_prestamo_plazo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0008_recibo.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Operaciones_Bancarias/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +85,9 @@
       <workItem from="1659042153586" duration="930000" />
       <workItem from="1659055801664" duration="2879000" />
       <workItem from="1659061729280" duration="6038000" />
-      <workItem from="1659305674479" duration="13759000" />
+      <workItem from="1659305674479" duration="14141000" />
+      <workItem from="1660075840655" duration="7010000" />
+      <workItem from="1660146067585" duration="1325000" />
     </task>
     <servers />
   </component>
