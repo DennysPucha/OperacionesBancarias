@@ -3,15 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0fc76f7a-a637-43a4-881a-016aac51e342" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Operaciones_Bancarias/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Operaciones_Bancarias/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Interfaz/dashboard-id.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/dashboard-id.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Interfaz/depositos-id.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/depositos-id.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Interfaz/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Interfaz/prestamos-id.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/prestamos-id.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Interfaz/retiros-id.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/retiros-id.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/support.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/support.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Interfaz/transferencias-id.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/transferencias-id.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +87,7 @@
       <workItem from="1660347119687" duration="692000" />
       <workItem from="1660531079749" duration="5994000" />
       <workItem from="1660577699015" duration="23020000" />
-      <workItem from="1660660695583" duration="11594000" />
+      <workItem from="1660660695583" duration="15066000" />
     </task>
     <servers />
   </component>
