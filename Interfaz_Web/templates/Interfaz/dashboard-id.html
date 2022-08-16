@@ -22,16 +22,16 @@
                     <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../prestamos-id/1">Prestamos</a>
+                    <a class="nav-link" href="../prestamos-id/{{cuenta.id}}">Prestamos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../transferencias-id/1">Transferencias</a>
+                    <a class="nav-link" href="../transferencias-id/{{cuenta.id}}">Transferencias</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../depositos-id/1">Depósitos</a>
+                    <a class="nav-link" href="../depositos-id/{{cuenta.id}}">Depósitos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../retiros-id/1">Retiros</a>
+                    <a class="nav-link" href="../retiros-id/{{cuenta.id}}">Retiros</a>
                   </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,15 +50,20 @@
           <div class="container-xxl" style="display:flex;">
                <div>
                 <div class="card" style="width: 18rem; margin-top: 2em; margin-bottom: 2em; margin-left: 2em;">
-                    <img src="{% static '/rec-img/usuario.jpg'%}" class="card-img-top" alt="...">
+                    <img src="{% if cuenta.Cliente_List.Tipo_de_Sexo == "Hombre" %}
+                            {% static '/rec-img/usuario.jpg'%}
+                        {% else %}
+                            {% static '/rec-img/cliente_femenino.png'%}
+                    {% endif %}" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">{{ Cuenta }}</h5>
-                      <p class="card-text">correo@gmail.com</p>
+                      <h5 class="card-title">{{cuenta.Cliente_List.Nombre}}</h5>
+                      <p class="card-text">{{cuenta.Cliente_List.Correo}}</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Nro de telefono: 0051949151</li>
-                      <li class="list-group-item">Cédula:113065122</li>
-                      <li class="list-group-item">Tipo de Sexo: Hombre</li>
+                      <li class="list-group-item">Nro de telefono: {{cuenta.Cliente_List.Nro_Telefono}}</li>
+                      <li class="list-group-item">Cédula:{{cuenta.Cliente_List.Cedula}}</li>
+                      <li class="list-group-item">Tipo de Sexo: {{cuenta.Cliente_List.Tipo_de_Sexo}}</li>
+                        <li class="list-group-item">Orientación de Cuenta: {{cuenta.Orientación_de_Cuenta}}</li>
                     </ul>
                     <div class="card-body">
                       <a href="../../Operaciones_Bancarias/" class="card-link">Ir al inicio</a>
@@ -73,8 +78,8 @@
                       <div class="card">
                         <div class="card-body">
                           <h5 class="card-title">Cantidad de Dinero</h5>
-                          <p class="card-text">000.000</p>
-                          <a href="../transferencias-id/1" class="btn btn-primary" >Transferir<br>Dinero</a>
+                          <p class="card-text">{{cuenta.Cantidad_de_Dinero}}</p>
+                          <a href="../transferencias-id/{{cuenta.id}}" class="btn btn-primary" >Transferir<br>Dinero</a>
                         </div>
                       </div>
                     </div>
@@ -84,7 +89,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Prestamos</h5>
                           <p class="card-text">¿Desea realiza un prestamo?</p>
-                          <a href="../prestamos-id/1" class="btn btn-primary">Ir a Prestamos</a>
+                          <a href="../prestamos-id/{{cuenta.id}}" class="btn btn-primary">Ir a Prestamos</a>
                         </div>
                       </div>
                     </div>
@@ -96,7 +101,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Retiros</h5>
                           <p class="card-text">¿Desea realiza un <br>retiro?</p>
-                          <a href="../retiros-id/1" class="btn btn-primary">Ir a retiros</a>
+                          <a href="../retiros-id/{{cuenta.id}}" class="btn btn-primary">Ir a retiros</a>
                         </div>
                       </div>
                     </div>
@@ -106,7 +111,33 @@
                         <div class="card-body">
                           <h5 class="card-title">Depositos</h5>
                           <p class="card-text">¿Desea realizar un depósito?</p>
-                          <a href="../depositos-id/1" class="btn btn-primary">Ir a Depósitos</a>
+                          <a href="../depositos-id/{{cuenta.id}}" class="btn btn-primary">Ir a Depósitos</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Nro. de Cuenta</h5>
+                          <p class="card-text">{{cuenta.Nro_Cuenta}}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Intereses</h5>
+                          <p class="card-text">¿Su cuenta Genera Intereses?
+                              <br>{% if cuenta.Generación_de_Intereses %}
+                                Si genera Intereses
+                                  {% else %}
+                                  No genera Intereses
+                              {% endif %}
+                          </p>
                         </div>
                       </div>
                     </div>
