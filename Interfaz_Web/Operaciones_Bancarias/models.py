@@ -78,7 +78,7 @@ Tipo_de_Operacion_Bancaria_CHOICES = (
     )
 
 class Solicitud(models.Model):
-    Cliente=models.OneToOneField(Cliente, on_delete=models.CASCADE)
+    Cliente=models.ManyToManyField(Cliente,blank=True)
     Cuenta=models.OneToOneField(Cuenta, on_delete=models.CASCADE)
     Registro=models.OneToOneField(Registro, on_delete=models.CASCADE)
     Divisa=models.CharField(max_length=20,choices=Tipo_de_Divisa_CHOICES,default='Dolar')
@@ -105,6 +105,10 @@ class Prestamo(models.Model):
 class Recibo(models.Model):
     Cliente=models.OneToOneField(Cliente, on_delete=models.CASCADE)
     Solicitud=models.ForeignKey(Solicitud, on_delete=models.CASCADE, related_name='slct_list')
+
+class Soporte(models.Model):
+    Problema=models.TextField()
+    Cuenta=models.ForeignKey(Cuenta, on_delete=models.CASCADE,related_name='ctn_list')
 
 
 

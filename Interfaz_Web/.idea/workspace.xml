@@ -2,9 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fc76f7a-a637-43a4-881a-016aac51e342" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0002_remove_solicitud_cliente_solicitud_cliente.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interfaz_Web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaz_Web/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Interfaz_Web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaz_Web/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Operaciones_Bancarias/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0002_alter_cuenta_nro_cuenta_alter_persona_tipo_de_sexo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0003_alter_empleado_tipo_de_contrato.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0004_solicitud_divisa_solicitud_monto_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0005_remove_prestamo_solicitud_prestamo_clientelist_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0006_prestamo_divisa.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/migrations/0007_alter_persona_cedula.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Operaciones_Bancarias/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Operaciones_Bancarias/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Operaciones_Bancarias/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Operaciones_Bancarias/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-grid.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-grid.rtl.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-grid.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-reboot.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-reboot.rtl.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-reboot.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-utilities.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-utilities.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-utilities.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-utilities.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-utilities.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-utilities.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-utilities.rtl.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-utilities.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap.rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap.rtl.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/css/bootstrap.rtl.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/js/bootstrap.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/js/bootstrap.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/js/bootstrap.esm.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/js/bootstrap.esm.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/js/bootstrap.esm.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/js/bootstrap.esm.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/js/bootstrap.esm.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/js/bootstrap.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/bootstrap-5.2.0-dist/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/bootstrap-5.2.0-dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/rec-img/cuenta_bancaria.png" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/rec-img/cuenta_bancaria.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/rec-img/deposito.png" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/rec-img/deposito.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/rec-img/gente_tranquilidad.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/rec-img/gente_tranquilidad.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/rec-img/logo.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/rec-img/logo.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/rec-img/negocios.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/rec-img/negocios.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/rec-img/prestamo.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/rec-img/prestamo.jfif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/rec-img/retiro.webp" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/rec-img/retiro.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/rec-img/social.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/rec-img/social.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Interfaz/rec-img/transferencias.png" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Interfaz/static/rec-img/transferencias.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +101,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dennys\Desktop\repositorio\OperacionesBancarias\Interfaz_Web\templates\Interfaz\static" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Interfaz_Web" type="Python.DjangoServer" factoryName="Django server">
       <module name="Interfaz_Web" />
@@ -76,6 +147,8 @@
       <workItem from="1660075840655" duration="7010000" />
       <workItem from="1660146067585" duration="7000000" />
       <workItem from="1660347119687" duration="692000" />
+      <workItem from="1660531079749" duration="5994000" />
+      <workItem from="1660577699015" duration="23020000" />
     </task>
     <servers />
   </component>
