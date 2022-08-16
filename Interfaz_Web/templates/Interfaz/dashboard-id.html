@@ -1,0 +1,239 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'bootstrap-5.2.0-dist/css/bootstrap.min.css' %}">
+    <title>Inicio</title>
+  </head>
+
+  <body style="background-color:#547980;">
+    <script src="{% static 'bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js'%}" ></script>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../../Operaciones_Bancarias/">Banco Prado</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../prestamos-id/{{cuenta.id}}">Prestamos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../transferencias-id/{{cuenta.id}}">Transferencias</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../depositos-id/{{cuenta.id}}">Depósitos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../retiros-id/{{cuenta.id}}">Retiros</a>
+                  </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sesion
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="../../Operaciones_Bancarias/">Página de Inicio</a></li>
+                        <li><a class="dropdown-item" href="../../Operaciones_Bancarias/">Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </nav>  
+          
+          <div class="container-xxl" style="display:flex;">
+               <div>
+                <div class="card" style="width: 18rem; margin-top: 2em; margin-bottom: 2em; margin-left: 2em;">
+                    <img src="{% if cuenta.Cliente_List.Tipo_de_Sexo == "Hombre" %}
+                            {% static '/rec-img/usuario.jpg'%}
+                        {% else %}
+                            {% static '/rec-img/cliente_femenino.png'%}
+                    {% endif %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{cuenta.Cliente_List.Nombre}}</h5>
+                      <p class="card-text">{{cuenta.Cliente_List.Correo}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Nro de telefono: {{cuenta.Cliente_List.Nro_Telefono}}</li>
+                      <li class="list-group-item">Cédula:{{cuenta.Cliente_List.Cedula}}</li>
+                      <li class="list-group-item">Tipo de Sexo: {{cuenta.Cliente_List.Tipo_de_Sexo}}</li>
+                        <li class="list-group-item">Orientación de Cuenta: {{cuenta.Orientación_de_Cuenta}}</li>
+                    </ul>
+                    <div class="card-body">
+                      <a href="../../Operaciones_Bancarias/" class="card-link">Ir al inicio</a>
+                      <a href="../../Operaciones_Bancarias/" class="card-link">Cerrar Sesión</a>
+                    </div>
+                  </div>
+              </div>
+              
+              <div style="margin:2em;">
+                <div class="row">
+                    <div class="col-sm-6" >
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Cantidad de Dinero</h5>
+                          <p class="card-text">{{cuenta.Cantidad_de_Dinero}}</p>
+                          <a href="../transferencias-id/{{cuenta.id}}" class="btn btn-primary" >Transferir<br>Dinero</a>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Prestamos</h5>
+                          <p class="card-text">¿Desea realiza un prestamo?</p>
+                          <a href="../prestamos-id/{{cuenta.id}}" class="btn btn-primary">Ir a Prestamos</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Retiros</h5>
+                          <p class="card-text">¿Desea realiza un <br>retiro?</p>
+                          <a href="../retiros-id/{{cuenta.id}}" class="btn btn-primary">Ir a retiros</a>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Depositos</h5>
+                          <p class="card-text">¿Desea realizar un depósito?</p>
+                          <a href="../depositos-id/{{cuenta.id}}" class="btn btn-primary">Ir a Depósitos</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Nro. de Cuenta</h5>
+                          <p class="card-text">{{cuenta.Nro_Cuenta}}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Intereses</h5>
+                          <p class="card-text">¿Su cuenta Genera Intereses?
+                              <br>{% if cuenta.Generación_de_Intereses %}
+                                Si genera Intereses
+                                  {% else %}
+                                  No genera Intereses
+                              {% endif %}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                </div>
+                <br>
+              </div>
+              
+          </div>
+
+
+          <div>
+            <footer class="text-center text-lg-start text-white" style="background-color: #45526e">
+              <div class="container p-4 pb-0">
+                <section class="">
+                  <div class="row">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                      <h6 class="text-uppercase mb-4 font-weight-bold">
+                        Banco Prado
+                      </h6>
+                      <p>
+                        Entidad Bancaria ficticia, creada con el único objetivo de cultivar conocimiento,
+                        nada de la información presente en esta interfaz web debe ser utilizada con ningun
+                        otro objetivo
+                      </p>
+                    </div>
+          
+                    <hr class="w-100 clearfix d-md-none" />
+          
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                      <h6 class="text-uppercase mb-4 font-weight-bold">Servicios Utilizados</h6>
+                      <p>
+                        <a class="text-white" href="https://www.python.org/">Python</a>
+                      </p>
+                      <p>
+                        <a class="text-white" href="https://getbootstrap.com/">Bootstrap-5</a>
+                      </p>
+                      <p>
+                        <a class="text-white" href="https://www.djangoproject.com/">Django</a>
+                      </p>
+                      <p>
+                        <a class="text-white" href="https://www.postgresql.org/">PostgreSQL</a>
+                      </p>
+                    </div>   
+    
+                    <hr class="w-100 clearfix d-md-none" />
+    
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                      <h6 class="text-uppercase mb-4 font-weight-bold">
+                        Links
+                      </h6>
+                      <p>
+                        <a class="text-white" href="https://github.com/DennysPucha/OperacionesBancarias">Repositorio</a>
+                      </p>
+                      <p>
+                        <a class="text-white" href="https://drive.google.com/file/d/1IeTCEju4y5dtpeqpGyWeqJgb5-xb78tn/view?usp=sharing">UML</a>
+                      </p>
+                      <p>
+                        <a class="text-white" href="#">Video</a>
+                      </p>
+                    </div>
+          
+                    <hr class="w-100 clearfix d-md-none" />
+          
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                      <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
+                      <p>
+                        <a class="text-white" href="https://github.com/DennysPucha">Perfil: Dennys Pucha</a>
+                      </p>
+                      <p>
+                        <a class="text-white" href="https://github.com/LuisHidalgo2003">Perfil: Luis Hidalgo</a>
+                      </p>
+                    </div>
+    
+                  </div>
+                </section>
+    
+          
+                <hr class="my-3">
+    
+                <section class="p-3 pt-0">
+                  <div class="row d-flex align-items-center">
+    
+                    <div class="col-md-7 col-lg-8 text-center text-md-start">
+                      <div class="p-3">
+                        
+                        <a class="text-white" href="https://mdbootstrap.com/"
+                          > © Derechos Reservados</a
+                          >
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+    
+            </footer>
+        </div>
+  </body>
+</html>
